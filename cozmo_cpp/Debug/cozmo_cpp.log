@@ -1,0 +1,27 @@
+﻿  Charger_cpp.cpp
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\charger_cpp.h(21): error C2365: 'Charger_cpp::battery_voltage_procent': redefinition; previous definition was 'data member'
+  c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\charger_cpp.h(16): note: see declaration of 'Charger_cpp::battery_voltage_procent'
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\charger_cpp.cpp(16): error C2063: 'Charger_cpp::battery_voltage_procent': not a function
+  cozmo_cpp.cpp
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\cozmo_cpp.h(7): error C3646: 'cozmo_cpp': unknown override specifier
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\cozmo_cpp.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\cozmo_cpp.h(8): error C3646: 'cozmo_robot_cpp': unknown override specifier
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\cozmo_cpp.h(8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\cozmo_cpp.h(9): error C3646: 'cozmo_robot_Robot_cpp': unknown override specifier
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\cozmo_cpp.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  testing_module.cpp
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\cozmo_cpp.h(7): error C3646: 'cozmo_cpp': unknown override specifier
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\cozmo_cpp.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\cozmo_cpp.h(8): error C3646: 'cozmo_robot_cpp': unknown override specifier
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\cozmo_cpp.h(8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\cozmo_cpp.h(9): error C3646: 'cozmo_robot_Robot_cpp': unknown override specifier
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\cozmo_cpp.h(9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\charger_cpp.h(21): error C2365: 'Charger_cpp::battery_voltage_procent': redefinition; previous definition was 'data member'
+  c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\charger_cpp.h(16): note: see declaration of 'Charger_cpp::battery_voltage_procent'
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\testing_module.cpp(56): error C2039: 'cozmo_robot_Robot_cpp': is not a member of 'Cozmo_cpp'
+  c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\cozmo_cpp.h(3): note: see declaration of 'Cozmo_cpp'
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\testing_module.cpp(56): error C2064: term does not evaluate to a function taking 1 arguments
+  Generating Code...

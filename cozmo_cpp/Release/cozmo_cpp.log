@@ -1,5 +1,9 @@
-﻿     Creating library C:\Users\nigar\Desktop\BA_Implementierung\cozmo_cpp\Release\cozmo_cpp.lib and object C:\Users\nigar\Desktop\BA_Implementierung\cozmo_cpp\Release\cozmo_cpp.exp
+﻿  Charger_cpp.cpp
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\charger_cpp.cpp(20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   Generating code
-  All 171 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  4 of 167 functions ( 2.4%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  cozmo_cpp.vcxproj -> C:\Users\nigar\Desktop\BA_Implementierung\cozmo_cpp\Release\cozmo_cpp.pyd
+  cozmo_cpp.vcxproj -> C:\Users\nigar\Desktop\BA_Implementierung\cozmo_cpp\Release\cozmo_cpp.exe
