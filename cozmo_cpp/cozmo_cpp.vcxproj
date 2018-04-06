@@ -128,13 +128,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Object_cpp.cpp" />
     <ClCompile Include="build_module.cpp" />
-    <ClCompile Include="Charger.cpp" />
+    <ClCompile Include="Charger_cpp.cpp" />
     <ClCompile Include="cozmo_cpp.cpp" />
     <ClCompile Include="testing_module.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Charger.h" />
+    <ClInclude Include="Object_cpp.h" />
+    <ClInclude Include="Charger_cpp.h" />
     <ClInclude Include="Cozmo_cpp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

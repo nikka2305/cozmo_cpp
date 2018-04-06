@@ -1,7 +1,8 @@
 #pragma once
 #include <boost\python.hpp>
 #include <iostream>
-#include "Charger.h"
+#include "Charger_cpp.h"
+#include "Object_cpp.h"
 
 
 using namespace std;
@@ -14,29 +15,34 @@ class Cozmo_cpp
 
 private: 
 
-	float battery_in_procent;
-	const float FULL_BATTERY = 4.5f;
+	object cozmo_py;
+	object cozmo_robot_py;
+	object cozmo_robot_Robot_py;
+	object cozmo_world_py;
+	object charger_py;
+
+	const float FULL_BATTERY_VOLT = 4.5f;
+
+	float battery_voltage_in_procent(float &volt); //da wert nicht konstant immer abrfagen
+
+	
 
 public:
-
-	object cozmo_obj_cpp;
-	object cozmo_robot_cpp;
-	object cozmo_robot_Robot_cpp;
-
+	
 	Cozmo_cpp();
 	~Cozmo_cpp();
 
-	float getBattery_in_procent(float &volt);
-	bool check_robot_on_charger();
-	bool check_robot_knows_where_charger_is();
-	object looking_for(); //virtual ->loooking(charger), looking(ball), looking(face) -> aus Objekt ableiten evtl.
-	object drive_to(); //virtual -> drive(charger) usw.
+	bool know_where_is(Object_cpp theObject);
+
+	object looking_for(object &robot);
+
+	object drive_to(Object_cpp theObject);
 
 
-	float battery_voltage_procent(float &volt);
+	
 
 
 
-	object run(object &robot);
+	object run(object &robot); //ZUM TESTEN!!!
 };
 

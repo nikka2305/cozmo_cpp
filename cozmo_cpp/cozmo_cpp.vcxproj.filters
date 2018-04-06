@@ -24,7 +24,10 @@
     <ClCompile Include="build_module.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Charger.cpp">
+    <ClCompile Include="Charger_cpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Object_cpp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,7 +35,10 @@
     <ClInclude Include="Cozmo_cpp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Charger.h">
+    <ClInclude Include="Object_cpp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Charger_cpp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

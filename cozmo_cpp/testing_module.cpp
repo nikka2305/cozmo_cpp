@@ -1,5 +1,5 @@
 //#include "Cozmo_cpp.h"
-//#include "Charger.h"
+//#include "Charger_cpp.h"
 //
 //
 //string parse_python_exception() {
@@ -49,7 +49,7 @@
 //		Py_Initialize();
 //
 //		//Cozmo_cpp myCozmo = Cozmo_cpp();
-//		Charger myCharger;
+//		//Charger_cpp myCharger;
 //		object cozmo_obj_cpp = import("cozmo");
 //		object cozmo_robot_cpp = cozmo_obj_cpp.attr("robot");
 //		object cozmo_robot_Robot_cpp = cozmo_robot_cpp.attr("Robot");
