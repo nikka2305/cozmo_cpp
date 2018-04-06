@@ -8,16 +8,17 @@ using namespace std;
 using namespace boost;
 using namespace boost::python;
 
-class Charger_cpp
+class Charger
 {
 	
 public:
 	const float FULL_BATTERY = 4.5f;
 	float battery_procent;
 
-	Charger_cpp();
-	~Charger_cpp();
+	Charger();
+	~Charger();
 
-	static float battery_voltage_procent(object &robot);
+	//static float battery_voltage_procent(float &volt);
+	float b(float &volt);
 };
 

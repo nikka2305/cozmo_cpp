@@ -1,9 +1,12 @@
-﻿  Charger_cpp.cpp
+﻿  build_module.cpp
   Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
-c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\charger_cpp.cpp(20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  cozmo_cpp.cpp
+  Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\cozmo_cpp.cpp(17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     Creating library C:\Users\nigar\Desktop\BA_Implementierung\cozmo_cpp\Release\cozmo_cpp.lib and object C:\Users\nigar\Desktop\BA_Implementierung\cozmo_cpp\Release\cozmo_cpp.exp
   Generating code
-  4 of 167 functions ( 2.4%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  65 of 488 functions (13.3%) were compiled, the rest were copied from previous compilation.
+    50 functions were new in current compilation
+    49 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  cozmo_cpp.vcxproj -> C:\Users\nigar\Desktop\BA_Implementierung\cozmo_cpp\Release\cozmo_cpp.exe
+  cozmo_cpp.vcxproj -> C:\Users\nigar\Desktop\BA_Implementierung\cozmo_cpp\Release\cozmo_cpp.pyd

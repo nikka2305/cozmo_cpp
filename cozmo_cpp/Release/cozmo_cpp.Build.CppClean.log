@@ -1,7 +1,8 @@
 c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\release\vc141.pdb
-c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\release\testing_module.obj
 c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\release\cozmo_cpp.obj
-c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\release\charger_cpp.obj
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\release\charger.obj
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\release\testing_module.obj
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\release\build_module.obj
 c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\release\cozmo_cpp.lib
 c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\release\cozmo_cpp.exp
 c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\release\cozmo_cpp.ipdb
@@ -9,7 +10,7 @@ c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\release\cozmo_cpp.iobj
 c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\release\vcpkg.applocal.log
 c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\release\boost_python3-vc141-mt-x32-1_66.dll
 c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\release\python36.dll
-c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\release\cozmo_cpp.exe
+c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\release\cozmo_cpp.pyd
 c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\release\cozmo_cpp.pdb
 c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\release\cozmo_cpp.tlog\cl.command.1.tlog
 c:\users\nigar\desktop\ba_implementierung\cozmo_cpp\cozmo_cpp\release\cozmo_cpp.tlog\cl.read.1.tlog

@@ -18,18 +18,21 @@
     <ClCompile Include="cozmo_cpp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Charger_cpp.cpp">
+    <ClCompile Include="testing_module.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="testing_module.cpp">
+    <ClCompile Include="build_module.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Charger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Charger_cpp.h">
+    <ClInclude Include="Cozmo_cpp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Cozmo_cpp.h">
+    <ClInclude Include="Charger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
