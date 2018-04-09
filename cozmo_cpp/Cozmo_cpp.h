@@ -20,29 +20,34 @@ private:
 	object cozmo_robot_Robot_py;
 	object cozmo_world_py;
 	object charger_py;
+	object cozmo_robot_Robot_world_py;
+	object cozmo_util_py;
 
-	const float FULL_BATTERY_VOLT = 4.5f;
+	const float fFULL_BATTERY_VOLT = 4.5f;
+	float fBatteryInVolt;
+	float fBatteryInProcent;
 
-	float battery_voltage_in_procent(float &volt); //da wert nicht konstant immer abrfagen
+	float getBatteryInVolt();
+	float convertVoltInProcent(); 
 
 	
 
 public:
 	
 	Cozmo_cpp();
+	Cozmo_cpp(object &cozmo, object &Robot);
+
 	~Cozmo_cpp();
+
+	float getBatteryInProcent();
 
 	bool know_where_is(Object_cpp theObject);
 
-	object looking_for(object &robot);
+	object looking_for();
 
 	object drive_to(Object_cpp theObject);
 
+	void run(); //ZUM TESTEN!!!
 
-	
-
-
-
-	object run(object &robot); //ZUM TESTEN!!!
 };
 

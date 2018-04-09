@@ -48,7 +48,7 @@
 //	try {
 //		Py_Initialize();
 //
-//		//Cozmo_cpp myCozmo = Cozmo_cpp();
+//		Cozmo_cpp myCozmo = Cozmo_cpp();
 //		//Charger_cpp myCharger;
 //		object cozmo_obj_cpp = import("cozmo");
 //		object cozmo_robot_cpp = cozmo_obj_cpp.attr("robot");
@@ -56,8 +56,11 @@
 //
 //		object run_programm_function = cozmo_obj_cpp.attr("run_program");
 //
-//		run_programm_function(Cozmo_cpp::run);
+//		object runProp = myCozmo.run(cozmo_robot_Robot_cpp);
 //
+//		run_programm_function(runProp);
+//
+//		
 //	}
 //	catch (error_already_set const &) {
 //		PyErr_Print();
