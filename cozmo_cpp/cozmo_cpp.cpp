@@ -20,6 +20,8 @@ Cozmo_cpp::Cozmo_cpp(object &cozmo, object &robot) {
 	drive_straight_py = cozmo_robot_Robot_py.attr("drive_straight");
 	cozmo_util_distance_mm_py = cozmo_util_py.attr("distance_mm");
 	cozmo_util_speed_mmps_py = cozmo_util_py.attr("speed_mmps");
+	cozmo_robot_Robot_pose_py = cozmo_robot_Robot_py.attr("pose");
+	cozmo_robot_Robot_pose_origin_id_py = cozmo_robot_Robot_pose_py.attr("origin_id");
 }
 
 Cozmo_cpp::~Cozmo_cpp()
@@ -38,12 +40,25 @@ float Cozmo_cpp::getBatteryInProcent() {
 	return convertVoltInProcent();
 }
 
+//get the Position Object from pyObj
+object Cozmo_cpp::getPositionOf(object &pyObj) {
+	return pyObj.attr("pose");;
+}
+
+//not included in Boost.Python
+bool Cozmo_cpp::hasAttr(object &pyObj, const char* name) {
+	return PyObject_HasAttrString(pyObj.ptr(), name);
+}
+
 //cozmo goes to the object position
-void Cozmo_cpp::goTo(object &pyObj_pose) {
+void Cozmo_cpp::goToObject(object &pyObj) {
+	
+	object pose = getPositionOf(pyObj);
 	object go_to_pose_obj_py;
 	object go_to_pose_wait_for_completed_py;
+
 	try {
-		go_to_pose_obj_py = go_to_pose_py(pyObj_pose);
+		go_to_pose_obj_py = go_to_pose_py(pose);
 		go_to_pose_wait_for_completed_py = go_to_pose_obj_py.attr("wait_for_completed");
 		go_to_pose_wait_for_completed_py();
 	}
@@ -79,7 +94,7 @@ void Cozmo_cpp::driveStraight(float distanceMm, float speedMmps) {
 	}
 }
 
-//looking around for the object, return the position
+//looking around for the object, return the object with position
 object Cozmo_cpp::lookingFor(object &pyObj) {
 
 	cozmo_behavior_BehaviorType_LookAroundInPlace_py = cozmo_behavior_BehaviorType_py.attr("LookAroundInPlace");
@@ -88,14 +103,14 @@ object Cozmo_cpp::lookingFor(object &pyObj) {
 	object look_around_in_place_stop_py = look_around_in_place_obj_py.attr("stop");
 	object cozmo_world_wait_for_observed_charger_py = cozmo_robot_Robot_world_py.attr("wait_for_observed_charger");;
 	float timeout = 60.f;
-	object pyObj_pose;
+	//object pyObj_pose;
 	object charger_pose_py;
 
 	if (&pyObj == &charger_py) {
 
 		try {
 			pyObj = cozmo_world_wait_for_observed_charger_py(timeout);
-			pyObj_pose = pyObj.attr("pose");
+			//pyObj_pose = pyObj.attr("pose");
 		}
 		catch (error_already_set const &) {
 			PyErr_Print();
@@ -107,39 +122,42 @@ object Cozmo_cpp::lookingFor(object &pyObj) {
 
 	look_around_in_place_stop_py();
 
-	
-	
-
-
-
-	//object charger_pose_py = charger_py.attr("pose"); //funktioniert nur wenn er auf dem charger sitzt
-	//object charger_pose_origin_id_py = charger_pose_py.attr("origin_id");
-	//object cozmo_robot_Robot_pose_py = cozmo_robot_Robot_py.attr("pose"); 
-	//object cozmo_robot_Robot_pose_origin_id_py = cozmo_robot_Robot_pose_py.attr("origin_id");
-
-	//if (charger_pose_origin_id_py == cozmo_robot_Robot_pose_origin_id_py) //funktioniert nur wenn er auf dem charger sitzt
-	//	cout << "Cozmo already knows where the charger is!" << endl;
-	//else {
-	//	
-	//}
-	
-	//cozmo_world_wait_for_observed_charger_py(timeout);
-	return pyObj_pose;
+	return pyObj;
 }
 
+//is cozmo at the position? 
+bool Cozmo_cpp::isAlreadyAt(const object &pyObjPos) {
 
+	object charger_pose_origin_id_py = pyObjPos.attr("origin_id");
+
+	if (charger_pose_origin_id_py == cozmo_robot_Robot_pose_origin_id_py) {
+		return true;
+	}
+	return false;
+}
 
 void Cozmo_cpp::run(){
 	
-	//----LOOKING & DRIVE TO CHARGER -------
-	object newPos = lookingFor(charger_py);
-	goTo(newPos);
-	turnInPlace(180.f);
-	driveStraight(-100.f, -80);
+	cout << "LOOKING & DRIVE TO CHARGER: " << endl;
+	object newPos;
 
-	
+	if (hasAttr(charger_py, "pose")) {
+		newPos = getPositionOf(charger_py);
+		if (isAlreadyAt(newPos)==false) { //if not already at the position, don't know where the charger is
+			cout << "charger dont know " << endl;
+			newPos = lookingFor(charger_py);
+		}
+		cout << "goTo " << endl;
+		goToObject(newPos);
+		cout << "turn " << endl;
+		turnInPlace(180.f);
+		cout << "driveStraigth " << endl;
+		driveStraight(-100.f, -80);
 
-	//-----BATTERY VOLT & PROCENT-----
+	}
+
+
+	cout << "BATTERY VOLT & PROCENT " << endl;
 	float b = getBatteryInVolt();
 	float a = getBatteryInProcent();
 	cout << "Volt: " << b << endl;
@@ -147,7 +165,7 @@ void Cozmo_cpp::run(){
 
 	
 
-	//----SAY TEXT TEST-----
+	cout << "SAY TEXT TEST" << endl;
 	object say_text = cozmo_robot_Robot_py.attr("say_text");
 	string text = "hallo hier bin ich";
 	object wait_for_completed = say_text(text).attr("wait_for_completed");

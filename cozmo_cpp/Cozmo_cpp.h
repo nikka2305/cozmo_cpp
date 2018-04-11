@@ -18,6 +18,8 @@ private:
 	object cozmo_py;
 	object cozmo_robot_py;
 	object cozmo_robot_Robot_py;
+	object cozmo_robot_Robot_pose_py;
+	object cozmo_robot_Robot_pose_origin_id_py;
 
 	//Cozmo world
 	object cozmo_world_py;
@@ -47,10 +49,12 @@ private:
 	float getBatteryInVolt();
 	float convertVoltInProcent(); 
 	object lookingFor(object &pyObj);
-	void goTo(object &pyObj_pose);
+	void goToObject(object &pyObj_pose);
 	void turnInPlace(float degrees);
 	void driveStraight(float distanceMm, float speedMmps);
-	bool isAlreadyAt(object &pyObj_pose);
+	bool isAlreadyAt(const object &pyObj_pose);
+	object getPositionOf(object &pyObj);
+	bool hasAttr(object &pyObj, const char* name);
 
 public:
 	
@@ -60,10 +64,6 @@ public:
 	~Cozmo_cpp();
 
 	float getBatteryInProcent();
-	
-	
-
-
 
 	void run(); //ZUM TESTEN!!!
 

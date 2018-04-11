@@ -4,8 +4,8 @@
   Info: Boost.Config is older than your compiler version - probably nothing bad will happen - but you may wish to look for an update Boost version.  Define BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE to suppress this message.
      Creating library C:\Users\nigar\Desktop\BA_Implementierung\cozmo_cpp\Release\cozmo_cpp.lib and object C:\Users\nigar\Desktop\BA_Implementierung\cozmo_cpp\Release\cozmo_cpp.exp
   Generating code
-  5 of 512 functions ( 1.0%) were compiled, the rest were copied from previous compilation.
-    4 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+  30 of 519 functions ( 5.8%) were compiled, the rest were copied from previous compilation.
+    6 functions were new in current compilation
+    34 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   cozmo_cpp.vcxproj -> C:\Users\nigar\Desktop\BA_Implementierung\cozmo_cpp\Release\cozmo_cpp.pyd
